@@ -1,0 +1,28 @@
+<h2 style="margin-left:0px; font-size:30px;">Cart</h2>
+<p>
+    <a routerLink="/shipping" style="color:blue">SHIPPING PRICES</a>
+</p>
+<div  *ngFor="let item of items">
+    <h3 style="font-size:25px; margin-left:20px;">{{item.name}}</h3>
+    <p style="font-size:25px; margin-left:20px;">{{item.price | currency}}</p>
+</div>
+<div class="checkout">CHECKOUT</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="forms">
+        <div class="first">
+            <label for="fname">FIRST NAME</label>
+            <input id="fname" type="text" formControlName="name" style="margin-top:12px">
+        </div>
+        <div class="second">
+            <label for="lname">LAST NAME</label>
+            <input id="lname" type="text" formControlName="address" style="margin-top:12px">
+        </div>
+        <div class="third">
+            <label for="mobileno">MOBILE NO</label>
+            <input id="mobileno" type="text" formControlName="address" style="margin-top:12px">
+        </div>
+        <div class="fourth">
+            <label for="address">ADDRESS</label>
+            <input id="address" type="text" formControlName="address" style="margin-top:12px">
+        </div>
+    <button class="button" type="submit" style="margin:22px auto; border-radius:20px">purchase</button>
+</form>

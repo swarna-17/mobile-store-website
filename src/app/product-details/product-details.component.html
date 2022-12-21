@@ -1,0 +1,7 @@
+<h2 style="margin-left:0px;">PRODUCT DETAILS</h2>
+<div  *ngIf="product" >
+  <h3 style="font-size:25px; margin-left:20px;">{{ product.name }}</h3>
+  <h4 style="font-size:20px; margin-left:20px;">{{ product.price | currency }}</h4>
+  <h5 style="font-size: 15px;margin-left: 20px;">{{ product.description }}</h5>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>
